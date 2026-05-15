@@ -37,7 +37,7 @@ public class ProfesorServiceTest {
         when(repository.save(any(Profesor.class))).thenReturn(profesor);
         Profesor guardado = service.guardarProfesor(new Profesor());
         assertNotNull(guardado);
-        assertEquals("Roberto García", guardado.getNombre());
+        assertEquals("Juan Perez", guardado.getNombre());
         verify(repository, times(1)).save(any(Profesor.class));
     }
 
